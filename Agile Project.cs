@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace InventoryTracker
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
-        public Form1()
+        public Login()
         {
             InitializeComponent();
+        }
+
+        private void Submit_Click(object sender, EventArgs e)
+        {
+            Home homeGo = new Home();
+            homeGo.Show();
+            this.Close();
         }
     }
 }

@@ -1,0 +1,6 @@
+C:\Users\DSU\Documents\Agile\obj\Debug\InventoryTracker.csproj.AssemblyReference.cache
+C:\Users\DSU\Documents\Agile\obj\Debug\InventoryTracker.csproj.SuggestedBindingRedirects.cache
+C:\Users\DSU\Documents\Agile\obj\Debug\InventoryTracker.Login.resources
+C:\Users\DSU\Documents\Agile\obj\Debug\InventoryTracker.Home.resources
+C:\Users\DSU\Documents\Agile\obj\Debug\InventoryTracker.Inventory.resources
+C:\Users\DSU\Documents\Agile\obj\Debug\InventoryTracker.csproj.GenerateResource.cache
