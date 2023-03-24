@@ -4,3 +4,16 @@ C:\Users\DSU\Documents\Agile\obj\Debug\InventoryTracker.Login.resources
 C:\Users\DSU\Documents\Agile\obj\Debug\InventoryTracker.Home.resources
 C:\Users\DSU\Documents\Agile\obj\Debug\InventoryTracker.Inventory.resources
 C:\Users\DSU\Documents\Agile\obj\Debug\InventoryTracker.csproj.GenerateResource.cache
+C:\Users\Stephanie\Source\Repos\agileproject\obj\Debug\InventoryTracker.csproj.AssemblyReference.cache
+C:\Users\Stephanie\Source\Repos\agileproject\obj\Debug\InventoryTracker.csproj.SuggestedBindingRedirects.cache
+C:\Users\Stephanie\Source\Repos\agileproject\obj\Debug\InventoryTracker.Login.resources
+C:\Users\Stephanie\Source\Repos\agileproject\obj\Debug\InventoryTracker.Home.resources
+C:\Users\Stephanie\Source\Repos\agileproject\obj\Debug\InventoryTracker.Inventory.resources
+C:\Users\Stephanie\Source\Repos\agileproject\obj\Debug\InventoryTracker.csproj.GenerateResource.cache
+C:\Users\Stephanie\source\repos\agileproject\obj\Debug\InventoryTracker.csproj.CoreCompileInputs.cache
+C:\Users\Stephanie\source\repos\agileproject\bin\Debug\InventoryTracker.exe.config
+C:\Users\Stephanie\source\repos\agileproject\bin\Debug\InventoryTracker.exe
+C:\Users\Stephanie\source\repos\agileproject\bin\Debug\InventoryTracker.pdb
+C:\Users\Stephanie\source\repos\agileproject\obj\Debug\InventoryTracker.Properties.Resources.resources
+C:\Users\Stephanie\source\repos\agileproject\obj\Debug\InventoryTracker.exe
+C:\Users\Stephanie\source\repos\agileproject\obj\Debug\InventoryTracker.pdb

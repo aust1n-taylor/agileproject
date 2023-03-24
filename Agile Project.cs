@@ -20,7 +20,8 @@ namespace InventoryTracker
         private void Submit_Click(object sender, EventArgs e)
         {
             Home homeGo = new Home();
-            homeGo.Show();
+            this.Hide();
+            homeGo.ShowDialog();
             this.Close();
         }
     }
