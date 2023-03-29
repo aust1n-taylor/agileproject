@@ -33,20 +33,22 @@
             // 
             // Inventory
             // 
-            this.Inventory.Location = new System.Drawing.Point(0, 0);
+            this.Inventory.Location = new System.Drawing.Point(14, 14);
+            this.Inventory.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Inventory.Name = "Inventory";
-            this.Inventory.Size = new System.Drawing.Size(113, 53);
+            this.Inventory.Size = new System.Drawing.Size(201, 82);
             this.Inventory.TabIndex = 0;
-            this.Inventory.Text = "Inventory";
+            this.Inventory.Text = "Modify Inventory";
             this.Inventory.UseVisualStyleBackColor = true;
             this.Inventory.Click += new System.EventHandler(this.Inventory_Click);
             // 
             // Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1422, 698);
             this.Controls.Add(this.Inventory);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "Home";
             this.Text = "Home";
             this.ResumeLayout(false);
