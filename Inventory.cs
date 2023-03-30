@@ -16,6 +16,8 @@ namespace InventoryTracker
 {
     public partial class Inventory : Form
     {
+        static GetList l = new GetList();
+        List<InventoryItem> inventory = l.inventory;
         public Inventory()
         {
             InitializeComponent();
@@ -46,12 +48,14 @@ namespace InventoryTracker
         {
             //Clear label just in case
             lblModifyResult.Text = "";
+            txtDisplay.Text = "";
+            txtDisplay.Visible = false;
 
             // If txtCount and txtItem have input, try to modify with modify count, if successful (return not null), inform user. 
             if (!StringExtensions.IsNullOrWhiteSpace(txtCount.Text) && !StringExtensions.IsNullOrWhiteSpace(txtItem.Text))
             {
-                GetList l = new GetList();
-                List<InventoryItem> inventory = l.inventory;
+                //GetList l = new GetList();
+                //List<InventoryItem> inventory = l.inventory;
 
                 string name = txtItem.Text;
                 string input = txtCount.Text;
@@ -75,6 +79,7 @@ namespace InventoryTracker
                 }
                 else 
                 {
+
                     lblModifyResult.Text = "Item has been modified.";
                 }
 
@@ -95,6 +100,24 @@ namespace InventoryTracker
                 lblModifyResult.Text = "Please fill out both text boxes above.";
             }
 
+        }
+
+        private void btnDisplay_Click(object sender, EventArgs e)
+        {
+            lblModifyResult.Text = "";
+            txtCount.Text = "";
+            txtItem.Text = "";
+            txtDisplay.Visible = true;
+            txtDisplay.Text = "";
+            foreach (var item in inventory)
+            {
+                txtDisplay.Text = txtDisplay.Text + item.Name + ": " + item.Quantity + Environment.NewLine;
+            }
+        }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
     public static class StringExtensions

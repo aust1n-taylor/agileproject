@@ -1,9 +1,13 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
+
 
 namespace InventoryTracker
 {
@@ -47,6 +51,7 @@ namespace InventoryTracker
             // Test Data for console log
             //inventory[1].Quantity = 1;
             ModifyItem.ModifyCount("Antibiotics", 5, inventory);
+            ModifyItem.ModifyCount("Asprin", 7, inventory);
 
             Console.WriteLine("New Inventory Report");
             Console.WriteLine("----------------");
@@ -58,6 +63,7 @@ namespace InventoryTracker
 
 
             // Need to save list somehow, serialize to json maybe?
+            //SaveList.SaveToFile(inventory);
 
 
             Console.ReadLine();
@@ -82,6 +88,13 @@ namespace InventoryTracker
             public CreateList()
             {
                 // Dummy Data
+                // Not working
+                /*
+                string folder = @"C:\Users\MyUser\source\repos\agileproject\";
+                string fileName = "InventoryDB.json";
+                string fullPath = folder + fileName;
+                string jsonString = File.ReadAllText(fullPath);
+                InventoryItem inventory = JsonSerializer.Deserialize<InventoryItem>(jsonString);*/
                 inventory.Add(new InventoryItem("Amphetamine", 0));
                 inventory.Add(new InventoryItem("Anesthesia", 0));
                 inventory.Add(new InventoryItem("Antibiotics", 0));
@@ -92,6 +105,19 @@ namespace InventoryTracker
                 inventory.Add(new InventoryItem("Ibuprofen", 0));
                 inventory.Add(new InventoryItem("Morphine", 0));
                 inventory.Add(new InventoryItem("Oxycodone", 0));
+            }
+        }
+
+        public class SaveList
+        {
+            public static void SaveToFile(List<InventoryItem> inventory)
+            {
+                // temp save location
+                string folder = @"C:\Users\MyUser\source\repos\agileproject\";
+                string fileName = "InventoryDB.json";
+                string fullPath = folder + fileName;
+                string jsonString = JsonSerializer.Serialize(inventory);
+                File.WriteAllText(fullPath, jsonString);
             }
         }
 
