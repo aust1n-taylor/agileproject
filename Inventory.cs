@@ -119,6 +119,22 @@ namespace InventoryTracker
         {
             this.Close();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var medication = txtItem.Text;
+            lblModifyResult.Text = "";
+            txtCount.Text = "";
+            txtItem.Text = "";
+            txtDisplay.Visible = true;
+            txtDisplay.Text = "";
+            foreach (var item in inventory)
+            {
+                if ( item.Name == medication) {
+                    txtDisplay.Text = txtDisplay.Text + item.Name + ": " + item.Quantity + Environment.NewLine;
+                }
+            }   
+        }
     }
     public static class StringExtensions
     {
