@@ -31,6 +31,8 @@
             this.Submit = new System.Windows.Forms.Button();
             this.Username = new System.Windows.Forms.TextBox();
             this.Password = new System.Windows.Forms.TextBox();
+            this.userlbl = new System.Windows.Forms.Label();
+            this.passwdlbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Submit
@@ -56,11 +58,31 @@
             this.Password.Size = new System.Drawing.Size(138, 26);
             this.Password.TabIndex = 2;
             // 
+            // userlbl
+            // 
+            this.userlbl.AutoSize = true;
+            this.userlbl.Location = new System.Drawing.Point(92, 123);
+            this.userlbl.Name = "userlbl";
+            this.userlbl.Size = new System.Drawing.Size(83, 20);
+            this.userlbl.TabIndex = 3;
+            this.userlbl.Text = "Username";
+            // 
+            // passwdlbl
+            // 
+            this.passwdlbl.AutoSize = true;
+            this.passwdlbl.Location = new System.Drawing.Point(92, 165);
+            this.passwdlbl.Name = "passwdlbl";
+            this.passwdlbl.Size = new System.Drawing.Size(78, 20);
+            this.passwdlbl.TabIndex = 4;
+            this.passwdlbl.Text = "Password";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(946, 601);
+            this.Controls.Add(this.passwdlbl);
+            this.Controls.Add(this.userlbl);
             this.Controls.Add(this.Password);
             this.Controls.Add(this.Username);
             this.Controls.Add(this.Submit);
@@ -76,6 +98,8 @@
         private System.Windows.Forms.Button Submit;
         private System.Windows.Forms.TextBox Username;
         private System.Windows.Forms.TextBox Password;
+        private System.Windows.Forms.Label userlbl;
+        private System.Windows.Forms.Label passwdlbl;
     }
 }
 

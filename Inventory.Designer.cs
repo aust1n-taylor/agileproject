@@ -64,7 +64,7 @@
             // 
             // btnModify
             // 
-            this.btnModify.Location = new System.Drawing.Point(142, 145);
+            this.btnModify.Location = new System.Drawing.Point(67, 171);
             this.btnModify.Margin = new System.Windows.Forms.Padding(2);
             this.btnModify.Name = "btnModify";
             this.btnModify.Size = new System.Drawing.Size(72, 32);
@@ -104,7 +104,7 @@
             // 
             // btnReturn
             // 
-            this.btnReturn.Location = new System.Drawing.Point(220, 145);
+            this.btnReturn.Location = new System.Drawing.Point(303, 173);
             this.btnReturn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(72, 32);
@@ -115,7 +115,7 @@
             // 
             // btnDisplay
             // 
-            this.btnDisplay.Location = new System.Drawing.Point(142, 186);
+            this.btnDisplay.Location = new System.Drawing.Point(145, 170);
             this.btnDisplay.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDisplay.Name = "btnDisplay";
             this.btnDisplay.Size = new System.Drawing.Size(150, 35);
@@ -156,9 +156,9 @@
             // 
             // medbuttn
             // 
-            this.medbuttn.Location = new System.Drawing.Point(142, 229);
+            this.medbuttn.Location = new System.Drawing.Point(105, 130);
             this.medbuttn.Name = "medbuttn";
-            this.medbuttn.Size = new System.Drawing.Size(150, 32);
+            this.medbuttn.Size = new System.Drawing.Size(232, 32);
             this.medbuttn.TabIndex = 12;
             this.medbuttn.Text = "Display Medication";
             this.medbuttn.UseVisualStyleBackColor = true;
