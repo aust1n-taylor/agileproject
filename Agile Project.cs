@@ -14,15 +14,17 @@ namespace InventoryTracker
     {
         public Login()
         {
+            
             InitializeComponent();
         }
 
         private void Submit_Click(object sender, EventArgs e)
         {
-            Home homeGo = new Home();
-            this.Hide();
-            homeGo.ShowDialog();
-            this.Close();
+            Username.Text = "test";
+            //Home homeGo = new Home();
+            //this.Hide();
+            //homeGo.ShowDialog();
+            //this.Close();
         }
     }
 }

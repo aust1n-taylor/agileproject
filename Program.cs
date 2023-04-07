@@ -23,8 +23,13 @@ namespace InventoryTracker
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login());
 
+
             GetList l = new GetList();
             List<InventoryItem> inventory = l.inventory;
+
+            // List of users
+            GetUsers temp = new GetUsers();
+            List<User> user = temp.user;
 
             /* List<InventoryItem> inventory = new List<InventoryItem>();
 
@@ -39,6 +44,14 @@ namespace InventoryTracker
              inventory.Add(new InventoryItem("Morphine", 0));
              inventory.Add(new InventoryItem("Oxycodone", 0));
              */
+            Console.WriteLine("Users");
+            Console.WriteLine("----------------");
+            foreach (var item in user)
+            {
+                Console.WriteLine("{0}, {1}, {2}, Privilege - {3}", item.Name, item.Password, item.Title, item.Privilege);
+            }
+            
+
 
             Console.WriteLine("Inventory Report");
             Console.WriteLine("----------------");
@@ -69,6 +82,43 @@ namespace InventoryTracker
             Console.ReadLine();
         }
 
+        public class User
+        {
+            public string Name { get; set; }
+            public string Password { get; set; }
+            public string Title { get; set; }
+            public int Privilege { get; set; }
+
+            public User(string name, string password, string title, int privilege) 
+            {
+                Name = name;
+                Password = password;
+                Title = title;
+                Privilege = privilege;
+            }
+        }
+
+        public class GetUsers
+        {
+            public List<User> user { get; set; }
+
+            public GetUsers()
+            {
+                CreateUsers users = new CreateUsers();
+                user = users.user;
+            }
+        }
+        public class CreateUsers
+        {
+            public List<User> user = new List<User>();
+
+            public CreateUsers()
+            {
+                // Dummy Data
+                user.Add(new User("John", "Password", "Manager", 0));
+            }
+        }
+
         public class InventoryItem
         {
             public string Name { get; set; }
@@ -80,6 +130,8 @@ namespace InventoryTracker
                 Quantity = quantity;
             }
         }
+
+
 
         public class CreateList
         {
@@ -107,6 +159,8 @@ namespace InventoryTracker
                 inventory.Add(new InventoryItem("Oxycodone", 0));
             }
         }
+
+        
 
         public class SaveList
         {
