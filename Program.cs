@@ -116,6 +116,38 @@ namespace InventoryTracker
             {
                 // Dummy Data
                 user.Add(new User("John", "Password", "Manager", 0));
+                user.Add(new User("Janitor", "Password", "Janitor", 3));
+            }
+        }
+
+        public partial class CheckUser
+        {
+            public static int FindUser(string name, string password, List<User> user)
+            {
+                // Initial find function, returns user privilege
+                int i = 0;
+                int found = 0;
+                foreach (var item in user)
+                {
+                    if (item.Name == name)
+                    {
+                        if(item.Password == password)
+                        {
+                            found = 1; break;
+                        }
+                    }
+                    i++;
+                }
+                if (found == 1)
+                {
+                    return user[i].Privilege;
+                }
+                else
+                {
+                    // Could not find in list
+                    return -1;
+                }
+
             }
         }
 
