@@ -23,6 +23,11 @@ namespace InventoryTracker
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login());
 
+         //   var defualtUser = new User("Mike");
+        //    Console.WriteLine(defualtUser.name);
+
+
+
             GetList l = new GetList();
             List<InventoryItem> inventory = l.inventory;
 

@@ -15,6 +15,8 @@ namespace InventoryTracker
         public Form1()
         {
             InitializeComponent();
+
+            Username.text = "hello";
         }
     }
 }
