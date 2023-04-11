@@ -33,59 +33,78 @@
             this.Password = new System.Windows.Forms.TextBox();
             this.userlbl = new System.Windows.Forms.Label();
             this.passwdlbl = new System.Windows.Forms.Label();
+            this.lblError = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Submit
             // 
-            this.Submit.Location = new System.Drawing.Point(198, 197);
+            this.Submit.Location = new System.Drawing.Point(352, 313);
+            this.Submit.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Submit.Name = "Submit";
-            this.Submit.Size = new System.Drawing.Size(92, 44);
+            this.Submit.Size = new System.Drawing.Size(164, 68);
             this.Submit.TabIndex = 0;
             this.Submit.Text = "Submit";
             this.Submit.Click += new System.EventHandler(this.Submit_Click);
             // 
             // Username
             // 
-            this.Username.Location = new System.Drawing.Point(198, 123);
+            this.Username.Location = new System.Drawing.Point(352, 191);
+            this.Username.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Username.Name = "Username";
-            this.Username.Size = new System.Drawing.Size(138, 26);
+            this.Username.Size = new System.Drawing.Size(242, 38);
             this.Username.TabIndex = 1;
+            this.Username.TextChanged += new System.EventHandler(this.Username_TextChanged);
             // 
             // Password
             // 
-            this.Password.Location = new System.Drawing.Point(198, 165);
+            this.Password.Location = new System.Drawing.Point(352, 256);
+            this.Password.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Password.Name = "Password";
-            this.Password.Size = new System.Drawing.Size(138, 26);
+            this.Password.PasswordChar = '*';
+            this.Password.Size = new System.Drawing.Size(242, 38);
             this.Password.TabIndex = 2;
+            this.Password.TextChanged += new System.EventHandler(this.Password_TextChanged);
             // 
             // userlbl
             // 
             this.userlbl.AutoSize = true;
-            this.userlbl.Location = new System.Drawing.Point(92, 123);
+            this.userlbl.Location = new System.Drawing.Point(164, 191);
+            this.userlbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.userlbl.Name = "userlbl";
-            this.userlbl.Size = new System.Drawing.Size(83, 20);
+            this.userlbl.Size = new System.Drawing.Size(144, 32);
             this.userlbl.TabIndex = 3;
             this.userlbl.Text = "Username";
             // 
             // passwdlbl
             // 
             this.passwdlbl.AutoSize = true;
-            this.passwdlbl.Location = new System.Drawing.Point(92, 165);
+            this.passwdlbl.Location = new System.Drawing.Point(164, 256);
+            this.passwdlbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.passwdlbl.Name = "passwdlbl";
-            this.passwdlbl.Size = new System.Drawing.Size(78, 20);
+            this.passwdlbl.Size = new System.Drawing.Size(138, 32);
             this.passwdlbl.TabIndex = 4;
             this.passwdlbl.Text = "Password";
             // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.Location = new System.Drawing.Point(170, 118);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(0, 32);
+            this.lblError.TabIndex = 5;
+            // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(946, 601);
+            this.ClientSize = new System.Drawing.Size(835, 932);
+            this.Controls.Add(this.lblError);
             this.Controls.Add(this.passwdlbl);
             this.Controls.Add(this.userlbl);
             this.Controls.Add(this.Password);
             this.Controls.Add(this.Username);
             this.Controls.Add(this.Submit);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "Login";
             this.Text = "Login";
             this.ResumeLayout(false);
@@ -100,6 +119,7 @@
         private System.Windows.Forms.TextBox Password;
         private System.Windows.Forms.Label userlbl;
         private System.Windows.Forms.Label passwdlbl;
+        private System.Windows.Forms.Label lblError;
     }
 }
 

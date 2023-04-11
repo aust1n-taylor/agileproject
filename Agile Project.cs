@@ -31,36 +31,41 @@ namespace InventoryTracker
 
                 int privilege = CheckUser.FindUser(name, pass, user);
 
-                switch (privilege)
+                if (privilege == -1)
                 {
-                    case -1:
-                        // User not found
-                        // Show error?
-                        break;
-                    case 0:
-                        // Most privileges
-                        Home homeGo = new Home();
-                        this.Hide();
-                        homeGo.ShowDialog();
-                        this.Close();
-                        break;
-                    case 1:
-                        // Needs Different Home
-                        break;
-                    case 2:
-                        // Needs Different Home
-                        break;
-                    case 3:
-                        // Needs Different Home
-                        // Least privileges
-                        break;
+                    lblError.Text = "Invalid login information.";
+                }
+                else
+                {
+                    Home homeGo = new Home(privilege);
+                    this.Hide();
+                    homeGo.ShowDialog();
+                    this.Close();
                 }
 
             }
-            else
+            else if (StringExtensions.IsNullOrWhiteSpace(Username.Text) && StringExtensions.IsNullOrWhiteSpace(Password.Text))
             {
-                // Tell user to enter something in each box
+                lblError.Text = "Please fill out the forms below.";
             }
+            else if (StringExtensions.IsNullOrWhiteSpace(Username.Text))
+            {
+                lblError.Text = "Please enter a username.";
+            }
+            else if (StringExtensions.IsNullOrWhiteSpace(Password.Text))
+            {
+                lblError.Text = "Please enter a password";
+            }
+        }
+
+        private void Username_TextChanged(object sender, EventArgs e)
+        {
+            lblError.Text = "";
+        }
+
+        private void Password_TextChanged(object sender, EventArgs e)
+        {
+            lblError.Text = "";
         }
     }
 }
