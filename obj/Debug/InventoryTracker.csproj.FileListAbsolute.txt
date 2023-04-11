@@ -70,3 +70,4 @@ C:\Users\DSU\Source\Repos\aust1n-taylor\agileproject\obj\Debug\InventoryTracker.
 C:\Users\DSU\Source\Repos\aust1n-taylor\agileproject\obj\Debug\InventoryTracker.csproj.CopyComplete
 C:\Users\DSU\Source\Repos\aust1n-taylor\agileproject\obj\Debug\InventoryTracker.exe
 C:\Users\DSU\Source\Repos\aust1n-taylor\agileproject\obj\Debug\InventoryTracker.pdb
+C:\Users\Stephanie\source\repos\agileproject\obj\Debug\InventoryTracker.ItemReport.resources

@@ -179,16 +179,19 @@ namespace InventoryTracker
                 string fullPath = folder + fileName;
                 string jsonString = File.ReadAllText(fullPath);
                 InventoryItem inventory = JsonSerializer.Deserialize<InventoryItem>(jsonString);*/
-                inventory.Add(new InventoryItem("Amphetamine", 0));
-                inventory.Add(new InventoryItem("Anesthesia", 0));
-                inventory.Add(new InventoryItem("Antibiotics", 0));
-                inventory.Add(new InventoryItem("Asprin", 0));
-                inventory.Add(new InventoryItem("Calcium Chloride", 0));
-                inventory.Add(new InventoryItem("Covid Tests", 0));
-                inventory.Add(new InventoryItem("Fentanyl", 0));
-                inventory.Add(new InventoryItem("Ibuprofen", 0));
-                inventory.Add(new InventoryItem("Morphine", 0));
-                inventory.Add(new InventoryItem("Oxycodone", 0));
+                inventory.Add(new InventoryItem("Amphetamine", 10));
+                inventory.Add(new InventoryItem("Anesthesia", 20));
+                inventory.Add(new InventoryItem("Antibiotics", 20));
+                inventory.Add(new InventoryItem("Asprin", 10));
+                inventory.Add(new InventoryItem("Calcium Chloride", 30));
+                inventory.Add(new InventoryItem("Covid Tests", 50));
+                inventory.Add(new InventoryItem("Fentanyl", 10));
+                inventory.Add(new InventoryItem("Hand Soap", 7));
+                inventory.Add(new InventoryItem("Ibuprofen", 40));
+                inventory.Add(new InventoryItem("Paper Towels", 1));
+                inventory.Add(new InventoryItem("Toilet Paper", 3));
+                inventory.Add(new InventoryItem("Morphine", 20));
+                inventory.Add(new InventoryItem("Oxycodone", 20));
             }
         }
 

@@ -13,9 +13,11 @@ namespace InventoryTracker
 {
     public partial class Home : Form 
     {
+        int globalpriv = -1;
         public Home(int privilege)
         {
             InitializeComponent();
+            globalpriv = privilege;
             switch (privilege)
             {
                 case 0:
@@ -48,7 +50,8 @@ namespace InventoryTracker
 
         private void btnAlert_Click(object sender, EventArgs e)
         {
-
+            ItemReport itemReport = new ItemReport(globalpriv);
+            itemReport.Show();
         }
     }
 }
