@@ -182,7 +182,8 @@ namespace InventoryTracker
                 inventory.Add(new InventoryItem("Amphetamine", 10));
                 inventory.Add(new InventoryItem("Anesthesia", 20));
                 inventory.Add(new InventoryItem("Antibiotics", 20));
-                inventory.Add(new InventoryItem("Asprin", 10));
+                inventory.Add(new InventoryItem("Asprin", 3));
+                inventory.Add(new InventoryItem("Bleach", 18));
                 inventory.Add(new InventoryItem("Calcium Chloride", 30));
                 inventory.Add(new InventoryItem("Covid Tests", 50));
                 inventory.Add(new InventoryItem("Fentanyl", 10));
@@ -194,8 +195,6 @@ namespace InventoryTracker
                 inventory.Add(new InventoryItem("Oxycodone", 20));
             }
         }
-
-        
 
         public class SaveList
         {

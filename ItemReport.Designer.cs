@@ -30,16 +30,17 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.txtDisplay = new System.Windows.Forms.TextBox();
+            this.btnClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(22, 52);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(39, 81);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(292, 29);
+            this.label1.Size = new System.Drawing.Size(487, 46);
             this.label1.TabIndex = 11;
             this.label1.Text = "Items that are running low:";
             // 
@@ -47,24 +48,36 @@
             // 
             this.txtDisplay.BackColor = System.Drawing.SystemColors.Info;
             this.txtDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtDisplay.Location = new System.Drawing.Point(25, 124);
-            this.txtDisplay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDisplay.Location = new System.Drawing.Point(44, 192);
+            this.txtDisplay.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtDisplay.Multiline = true;
             this.txtDisplay.Name = "txtDisplay";
             this.txtDisplay.ReadOnly = true;
             this.txtDisplay.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtDisplay.Size = new System.Drawing.Size(390, 355);
+            this.txtDisplay.Size = new System.Drawing.Size(690, 548);
             this.txtDisplay.TabIndex = 12;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(299, 766);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(135, 57);
+            this.btnClose.TabIndex = 13;
+            this.btnClose.Text = "Ok";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // ItemReport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ClientSize = new System.Drawing.Size(450, 490);
+            this.ClientSize = new System.Drawing.Size(800, 835);
+            this.ControlBox = false;
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.txtDisplay);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "ItemReport";
             this.Text = "Item Report";
             this.Load += new System.EventHandler(this.ItemReport_Load);
@@ -76,5 +89,6 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtDisplay;
+        private System.Windows.Forms.Button btnClose;
     }
 }
