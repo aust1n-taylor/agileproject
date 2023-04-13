@@ -38,73 +38,76 @@
             // 
             // Submit
             // 
-            this.Submit.Location = new System.Drawing.Point(352, 313);
-            this.Submit.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Submit.BackColor = System.Drawing.SystemColors.Info;
+            this.Submit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Submit.Location = new System.Drawing.Point(153, 224);
             this.Submit.Name = "Submit";
-            this.Submit.Size = new System.Drawing.Size(164, 68);
+            this.Submit.Size = new System.Drawing.Size(107, 53);
             this.Submit.TabIndex = 0;
             this.Submit.Text = "Submit";
+            this.Submit.UseVisualStyleBackColor = false;
             this.Submit.Click += new System.EventHandler(this.Submit_Click);
             // 
             // Username
             // 
-            this.Username.Location = new System.Drawing.Point(352, 191);
-            this.Username.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Username.BackColor = System.Drawing.SystemColors.Info;
+            this.Username.Location = new System.Drawing.Point(198, 123);
             this.Username.Name = "Username";
-            this.Username.Size = new System.Drawing.Size(242, 38);
+            this.Username.Size = new System.Drawing.Size(138, 26);
             this.Username.TabIndex = 1;
             this.Username.TextChanged += new System.EventHandler(this.Username_TextChanged);
             // 
             // Password
             // 
-            this.Password.Location = new System.Drawing.Point(352, 256);
-            this.Password.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Password.BackColor = System.Drawing.SystemColors.Info;
+            this.Password.Location = new System.Drawing.Point(198, 165);
             this.Password.Name = "Password";
             this.Password.PasswordChar = '*';
-            this.Password.Size = new System.Drawing.Size(242, 38);
+            this.Password.Size = new System.Drawing.Size(138, 26);
             this.Password.TabIndex = 2;
             this.Password.TextChanged += new System.EventHandler(this.Password_TextChanged);
             // 
             // userlbl
             // 
             this.userlbl.AutoSize = true;
-            this.userlbl.Location = new System.Drawing.Point(164, 191);
-            this.userlbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.userlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.userlbl.Location = new System.Drawing.Point(68, 119);
             this.userlbl.Name = "userlbl";
-            this.userlbl.Size = new System.Drawing.Size(144, 32);
+            this.userlbl.Size = new System.Drawing.Size(124, 29);
             this.userlbl.TabIndex = 3;
             this.userlbl.Text = "Username";
             // 
             // passwdlbl
             // 
             this.passwdlbl.AutoSize = true;
-            this.passwdlbl.Location = new System.Drawing.Point(164, 256);
-            this.passwdlbl.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.passwdlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.passwdlbl.Location = new System.Drawing.Point(72, 161);
             this.passwdlbl.Name = "passwdlbl";
-            this.passwdlbl.Size = new System.Drawing.Size(138, 32);
+            this.passwdlbl.Size = new System.Drawing.Size(120, 29);
             this.passwdlbl.TabIndex = 4;
             this.passwdlbl.Text = "Password";
             // 
             // lblError
             // 
             this.lblError.AutoSize = true;
-            this.lblError.Location = new System.Drawing.Point(170, 118);
+            this.lblError.Location = new System.Drawing.Point(96, 76);
+            this.lblError.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(0, 32);
+            this.lblError.Size = new System.Drawing.Size(0, 20);
             this.lblError.TabIndex = 5;
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(835, 932);
+            this.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.ClientSize = new System.Drawing.Size(470, 601);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.passwdlbl);
             this.Controls.Add(this.userlbl);
             this.Controls.Add(this.Password);
             this.Controls.Add(this.Username);
             this.Controls.Add(this.Submit);
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "Login";
             this.Text = "Login";
             this.ResumeLayout(false);
