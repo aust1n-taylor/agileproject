@@ -105,3 +105,4 @@ C:\Users\DSU\Source\Repos\agileproject\obj\Debug\InventoryTracker.csproj.CoreCom
 C:\Users\DSU\Source\Repos\agileproject\obj\Debug\InventoryTracker.csproj.CopyComplete
 C:\Users\DSU\Source\Repos\agileproject\obj\Debug\InventoryTracker.exe
 C:\Users\DSU\Source\Repos\agileproject\obj\Debug\InventoryTracker.pdb
+C:\Users\DSU\Source\Repos\agileproject\obj\Debug\InventoryTracker.PurchaseOrder.resources

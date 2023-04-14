@@ -53,5 +53,16 @@ namespace InventoryTracker
             ItemReport itemReport = new ItemReport(globalpriv);
             itemReport.Show();
         }
+
+        private void btnAddUser_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btngenpo_Click(object sender, EventArgs e)
+        {
+            PurchaseOrder purchaseOrder = new PurchaseOrder();
+            purchaseOrder.Show();
+        }
     }
 }

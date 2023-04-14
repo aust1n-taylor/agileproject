@@ -117,6 +117,7 @@ namespace InventoryTracker
                 // Dummy Data
                 user.Add(new User("John", "Password", "Manager", 0));
                 user.Add(new User("Janitor", "Password", "Janitor", 3));
+                user.Add(new User("Dean", "adminpassword", "Admin", 0));
             }
         }
 
