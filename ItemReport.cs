@@ -38,10 +38,29 @@ namespace InventoryTracker
             // Admin
             if (privilege == 0)
             {
-                label1.Text = "Item Report.";
+                label1.Text = "Supplies that are running low:";
+                
+                txtDisplay.Text = "Supply\t               Quantity\tThreshold" + Environment.NewLine;
                 foreach (var item in inventory)
                 {
-                    txtDisplay.Text = txtDisplay.Text + item.Name + ": " + item.Quantity + Environment.NewLine;
+                    /*if(item.Name == "Antibiotics")
+                    {
+                        txtDisplay.Text = txtDisplay.Text + item.Name + "\t\t" + item.Quantity + "\t        " + item.Threshold + Environment.NewLine;
+                    }*/
+                    // Formatting
+                    
+                    if (item.Name.Length <= 9 && item.Name != "Hand Soap" && item.Name != "Oxycodone")
+                    {
+                        txtDisplay.Text = txtDisplay.Text + item.Name + "\t\t" + item.Quantity + "\t        " + item.Threshold + Environment.NewLine;
+                    }
+                    else if (item.Name == "Antibiotics")
+                    {
+                        txtDisplay.Text = txtDisplay.Text + item.Name + "\t\t" + item.Quantity + "\t        " + item.Threshold + Environment.NewLine;
+                    }
+                    else
+                    {
+                        txtDisplay.Text = txtDisplay.Text + item.Name + "\t" + item.Quantity + "\t        " + item.Threshold + Environment.NewLine;
+                    }
                 }
             }
             // Janitor
@@ -49,15 +68,24 @@ namespace InventoryTracker
 
 
                 label1.Text = "Supplies that are running low:";
+                txtDisplay.Text = "Supply\t               Quantity\tThreshold" + Environment.NewLine;
                 foreach (var item in inventory)
                 {
                     // Only Allow for Janitor Items to show.
                     if(janitor.Contains(item.Name))
                     {
                         // Print that items that are low
-                        if (item.Quantity < 5)
+                        if (item.Quantity <= item.Threshold)
                         {
-                            txtDisplay.Text = txtDisplay.Text + item.Name + ": " + item.Quantity + Environment.NewLine;
+                            // Formatting 
+                            if (item.Name.Length <= 7)
+                            {
+                                txtDisplay.Text = txtDisplay.Text + item.Name + "\t\t" + item.Quantity + "\t        " + item.Threshold + Environment.NewLine;
+                            }
+                            else
+                            {
+                                txtDisplay.Text = txtDisplay.Text + item.Name + "\t" + item.Quantity + "\t        " + item.Threshold + Environment.NewLine;
+                            }
                         }
                         
                     } 

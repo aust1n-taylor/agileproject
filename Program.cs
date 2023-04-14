@@ -58,7 +58,7 @@ namespace InventoryTracker
 
             foreach (var item in inventory)
             {
-                Console.WriteLine("{0} - {1} units", item.Name, item.Quantity);
+                Console.WriteLine("{0} - {1} units, theshold {2}", item.Name, item.Quantity, item.Threshold);
             }
 
             // Test Data for console log
@@ -71,7 +71,7 @@ namespace InventoryTracker
 
             foreach (var item in inventory)
             {
-                Console.WriteLine("{0} - {1} units", item.Name, item.Quantity);
+                Console.WriteLine("{0} - {1} units, theshold {2}", item.Name, item.Quantity, item.Threshold);
             }
 
 
@@ -155,11 +155,13 @@ namespace InventoryTracker
         {
             public string Name { get; set; }
             public int Quantity { get; set; }
+            public int Threshold { get; set; }
 
-            public InventoryItem(string name, int quantity)
+            public InventoryItem(string name, int quantity, int threshold)
             {
                 Name = name;
                 Quantity = quantity;
+                Threshold = threshold;
             }
         }
 
@@ -179,20 +181,20 @@ namespace InventoryTracker
                 string fullPath = folder + fileName;
                 string jsonString = File.ReadAllText(fullPath);
                 InventoryItem inventory = JsonSerializer.Deserialize<InventoryItem>(jsonString);*/
-                inventory.Add(new InventoryItem("Amphetamine", 10));
-                inventory.Add(new InventoryItem("Anesthesia", 20));
-                inventory.Add(new InventoryItem("Antibiotics", 20));
-                inventory.Add(new InventoryItem("Asprin", 3));
-                inventory.Add(new InventoryItem("Bleach", 18));
-                inventory.Add(new InventoryItem("Calcium Chloride", 30));
-                inventory.Add(new InventoryItem("Covid Tests", 50));
-                inventory.Add(new InventoryItem("Fentanyl", 10));
-                inventory.Add(new InventoryItem("Hand Soap", 7));
-                inventory.Add(new InventoryItem("Ibuprofen", 40));
-                inventory.Add(new InventoryItem("Paper Towels", 1));
-                inventory.Add(new InventoryItem("Toilet Paper", 3));
-                inventory.Add(new InventoryItem("Morphine", 20));
-                inventory.Add(new InventoryItem("Oxycodone", 20));
+                inventory.Add(new InventoryItem("Amphetamine", 10, 10));
+                inventory.Add(new InventoryItem("Anesthesia", 20, 5));
+                inventory.Add(new InventoryItem("Antibiotics", 20, 5));
+                inventory.Add(new InventoryItem("Asprin", 3, 5));
+                inventory.Add(new InventoryItem("Bleach", 18, 5));
+                inventory.Add(new InventoryItem("Calcium Chloride", 30, 5));
+                inventory.Add(new InventoryItem("Covid Tests", 50, 10));
+                inventory.Add(new InventoryItem("Fentanyl", 10, 5));
+                inventory.Add(new InventoryItem("Hand Soap", 7, 5));
+                inventory.Add(new InventoryItem("Ibuprofen", 40, 10));
+                inventory.Add(new InventoryItem("Paper Towels", 1, 5));
+                inventory.Add(new InventoryItem("Toilet Paper", 3, 5));
+                inventory.Add(new InventoryItem("Morphine", 20, 10));
+                inventory.Add(new InventoryItem("Oxycodone", 20, 10));
             }
         }
 
