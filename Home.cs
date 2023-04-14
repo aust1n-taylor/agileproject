@@ -23,6 +23,8 @@ namespace InventoryTracker
                 case 0:
                     // Most privileges
                     btnInventory.Enabled = true;
+                    btnAlert.Enabled = true;
+                    btnUsers.Enabled = true;
                     lblLevel.Text = "Admin";
                     break;
                 case 1:
@@ -34,6 +36,7 @@ namespace InventoryTracker
                 case 3:
                     // Example of how to hide things
                     btnInventory.Enabled = false;
+                    btnUsers.Enabled= false;
                     btnAlert.Enabled = true;
                     lblLevel.Text = "Janitor";
                     break;
@@ -63,6 +66,12 @@ namespace InventoryTracker
         {
             PurchaseOrder purchaseOrder = new PurchaseOrder();
             purchaseOrder.Show();
+        }
+
+        private void btnUsers_Click(object sender, EventArgs e)
+        {
+            Users users = new Users();
+            users.Show();
         }
     }
 }
